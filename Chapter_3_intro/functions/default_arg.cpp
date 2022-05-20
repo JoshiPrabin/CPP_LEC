@@ -1,4 +1,4 @@
-// polymorphism C++
+// function with default arguement C++
 
 #include <iostream>
 
