@@ -1,39 +1,56 @@
-// making a class and using it to input and display info of students
-
 #include<iostream>
 using namespace std;
-
-class student{
+class StudentInfo
+{
     private:
-        string name,roll,address;
-        float percent;
-    public:
-        void input(){
-            cout<<"\nEnter the name of student: ";
-            cin>>name;
-            cout<<"\nEnter the roll no of student: ";
-            cin>>roll;
-            cout<<"\nEnter the address of student: ";
-            cin>>address;
-            cout<<"\nEnter the percentage of student: ";
-            cin>>percent;
-        }
+        char name[50];
+        int roll;
+        char address[50];
+        float percentage;
 
-        void display(){
-            cout<<"Name = "<<name<<endl;
-            cout<<"Roll = "<<roll<<endl;
-            cout<<"Address = "<<address<<endl;
-            if (percent>45){
-                cout<<"Result = Pass"<<endl;
+   public:
+        void input()
+        {
+                cout<<"Enter student name: "<<endl;
+                cin>>name;
+                cout<<"Enter roll: "<<endl;
+                cin>>roll;
+                cout<<"Enter address: "<<endl;
+                cin>>address;
+                cout<<"Enter student percentage: "<<endl;
+                cin>>percentage;
+        } 
+        void display ()
+        {
+            cout<<"Student Name\t";
+            cout<<"roll\t";
+            cout<<"Adresss\t";
+            cout<<"Result\n";
+            cout<<"\t"<<name;
+            cout<<"\t"<<roll;
+            cout<<"\t"<<address;
+            if (percentage>45){
+                cout<<"\t"<<" Pass"<<endl;
             }
             else{
-                 cout<<"Result = Fail"<<endl;
+                cout<<"\t"<<" fail"<<endl;
             }
         }
-};
 
-int main(){
-    student s1;
-    s1.input();
-    s1.display();
+};
+int main()
+{
+    int n,i;
+    StudentInfo s[n];
+    cout<<"Enter the number of student: ";
+    cin>>n;
+    for(i=1;i<=n;i++)
+    {
+       s[i].input();
+    }
+    for(i=1;i<=n;i++)
+    {
+       s[i].display();
+    }
+    return 0;
 }
