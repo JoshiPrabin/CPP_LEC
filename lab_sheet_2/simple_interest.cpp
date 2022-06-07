@@ -8,18 +8,14 @@ class simpleInterest{
         float principle,rate,time;
     public:
         
-        void calculateInterest(float principle, float rate, float time){
+        void calculateInterest(float principle, float time, float rate=15){
             float interest = (principle*rate*time)/100;
-            cout<<"The simple interest is: "<<interest<<endl;
-        }
-        void calculateInterest(float princ, float time){
-            float interest = (princ*15*time)/100;
             cout<<"The simple interest is: "<<interest<<endl;
         }
 };
 
 int main(){
     simpleInterest case1;
-    case1.calculateInterest(1000,10,1);
+    case1.calculateInterest(1000,1,10);
     case1.calculateInterest(1000,1);
 }
