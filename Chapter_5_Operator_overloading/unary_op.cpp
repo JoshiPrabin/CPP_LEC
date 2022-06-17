@@ -12,9 +12,9 @@ class unary{
         }
 
         void operator - (){
-            a = -a;
-            b = -b;
-            c = -c;
+            a = a;
+            b = b;
+            c = c;
         }
 
         void display(){
