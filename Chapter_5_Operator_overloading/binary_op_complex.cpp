@@ -20,7 +20,7 @@ class complex{
             cin>>imag;
         }
 
-        complex operator + (complex c1){
+        complex operator + (complex &c1){
             complex temp;
             temp.real=real+c1.real;
             temp.imag=imag+c1.imag;
