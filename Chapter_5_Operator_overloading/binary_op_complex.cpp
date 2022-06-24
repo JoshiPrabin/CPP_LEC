@@ -22,6 +22,8 @@ class complex{
 
         complex operator + (complex &c1){
             complex temp;
+            cout<<real<<endl; //real value of object c1 is printed.
+            cout<<imag<<endl; //imag value of object c1 is printed.
             temp.real=real+c1.real;
             temp.imag=imag+c1.imag;
             return temp;
