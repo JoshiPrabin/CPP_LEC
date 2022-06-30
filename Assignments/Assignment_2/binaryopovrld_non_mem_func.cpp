@@ -34,8 +34,8 @@ sum operator+(sum s1, sum s2)
 
 int main()
 {
-    sum s1(1, 1);
-    sum s2(1, 1);
+    sum s1(2, 2);
+    sum s2(2, 2);
     sum s3 = s1 + s2;
     s3.display();
 }
