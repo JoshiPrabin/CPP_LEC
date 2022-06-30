@@ -43,12 +43,12 @@ int main(){
     shape *shap;
     shape sh(1,2);
     shap = &sh;
-    shap -> area();
+    shap -> area(); //calls area() of base class
     rectangle rec(10,20);
     shap = &rec;
-    shap ->area();
+    shap ->area(); //calls area() of base class
     triangle tri(10,20);
     shap = &tri;
-    shap ->area();
+    shap ->area(); //calls area() of base class
     return 0;
 }
