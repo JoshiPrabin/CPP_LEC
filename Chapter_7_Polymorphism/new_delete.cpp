@@ -19,7 +19,7 @@ int main(){
     cout<<"Value assigned to pointint is: "<<*pointint<<endl;
     cout<<"Value assigned to pointfloat is: "<<*pointfloat<<endl;
 
-    //deallocating the memoryr
+    //deallocating the memory
     delete pointint;
     delete pointfloat;
 }
