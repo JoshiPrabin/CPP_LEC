@@ -19,14 +19,14 @@ class unary{
             cout<<"value of c: "<<c<<endl;
         }
 
-        friend void operator - (unary &m);
+        friend void operator - (unary &n);
 };
 
-void operator - (unary &m)
+void operator - (unary &n)
     {
-            m.a = -m.a;
-            m.b = -m.b;
-            m.c = -m.c;
+            n.a = -n.a;
+            n.b = -n.b;
+            n.c = -n.c;
         }
 
 
