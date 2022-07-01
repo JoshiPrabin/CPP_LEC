@@ -1,4 +1,4 @@
-//example of array of pointer to abse class object
+//example of array of pointer to base class object
 
 #include<iostream>
 using namespace std;
