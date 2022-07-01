@@ -46,7 +46,7 @@ int main(){
 
     Point *baseptr[] = {&pt,&ln,&tr,&py,&cr};
     cout<<"Figure drawn by the base pointer are: "<<endl;
-    for(int i=0;i<5;i++){
-        baseptr[i]->draw();
+    for(int j=0;j<5;j++){
+        baseptr[j]->draw();
     }
 }
