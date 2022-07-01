@@ -5,7 +5,7 @@ using namespace std;
 
 class Animal{
     public:
-        void display(){
+        virtual void display(){
             cout<<"\n from base class animal";
         }
 };
