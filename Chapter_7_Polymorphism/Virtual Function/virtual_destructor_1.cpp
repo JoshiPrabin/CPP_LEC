@@ -28,6 +28,6 @@ int main(){
     base *b;
     b = new derived;
     b->display();
-    delete b; //destructor of derived class is not invoked
+    delete b; //destructor of derived class is not invoked [undefined behaviour]
     return 0;
 }
