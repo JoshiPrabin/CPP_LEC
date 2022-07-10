@@ -1,65 +1,81 @@
+// an example of multipath inheritance
+
 #include<iostream>
 using namespace std;
-class Student{
+
+class student{
     protected:
-        string name,roll;
+        int roll;
+        char name[25];
     public:
-        virtual void getdata(){
-            cout<<"Enter name: ";
-            cin>>name;
-            cout<<"\nEnter roll: ";
+        void getstdata(){
+            cout<<"\n Enter roll: ";
             cin>>roll;
+            cout<<"\n Enter Name: ";
+            cin>>name;
         }
-        virtual void showdata(){
-            cout<<"\nName: "<<name<<endl;
-            cout<<"Roll: "<<roll<<endl;
+        void showstdata(){
+            cout<<"\n Student ID: "<<roll;
+            cout<<"\n Name: "<<name;
         }
 };
-class test: public Student{
+
+class test: virtual public student{
     protected:
-        int math, eng;
+        int math,eng;
     public:
         void getdata(){
-            cout<<"Enter marks in math: ";
-            cin>>math;
-            cout<<"\nEnter marks in english: ";
-            cin>>eng;
+            cout<<"\n Enter internal marks in math and english: ";
+            cin>>math>>eng;
         }
         void showdata(){
-            cout<<"Marks in math: "<<math<<endl;
-            cout<<"Marks in english: "<<eng<<endl;
+            cout<<"\n Internal marks in math: "<<math;
+            cout<<"\n Internal marks in english: "<<eng;
+        }
+        int total1(){
+            return (math+eng);
         }
 };
-class sport: public Student{
+
+class sport: virtual public student{
     protected:
         int score;
     public:
         void getdata(){
-            cout<<"Enter score: ";
+            cout<<"\n Enter score: ";
             cin>>score;
         }
         void showdata(){
-            cout<<"Total score: "<<score<<endl;
+            cout<<"\n Score: "<<score;
+        }
+        int total2(){
+            return (score);
         }
 };
-class result: public sport,public test{
-    private:
-        int total;
+
+class result: public test,public sport{
     public:
-        int sum(){
-            total = eng+math+score;
-            return total;
+        void getdata(){
+            test::getdata();
+            sport::getdata();
+        }
+        void showdata(){
+            test::showdata();
+            sport::showdata();
+        }
+        int TotalMarks(){
+            return (total1()+total2());
         }
 };
+
 int main(){
-    Student st;
-    test t;
-    sport s;
     result r;
-    st.getdata();
-    t.getdata();
-    s.getdata();
-    st.showdata();
-    cout<<"Total score is: "<<r.sum();
+    cout<<"\n Enter data for student: "<<endl;
+    r.getstdata();
+    cout<<"\n Enter marks: "<<endl;
+    r.getdata();
+    cout<<"\n Data for the student is : "<<endl;
+    r.showdata();
+    cout<<"\n Total Score: "<<r.TotalMarks();
     return 0;
 }
