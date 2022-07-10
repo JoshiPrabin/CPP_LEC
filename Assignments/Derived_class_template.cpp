@@ -58,6 +58,35 @@ public:
         cout << "in derived data: " << data << endl;
     }
 };
+class base2
+{
+private:
+    int data;
+
+public:
+    base2() {}
+    base2(int d) { data = d; }
+    void display()
+    {
+        cout << "data: " << data << endl;
+    }
+};
+template <class T>
+class derived5 : public base2
+{
+private:
+    T data;
+
+public:
+    derived5() {}
+    derived5(int a, T b) : base2(a), data(b) {}
+    void display()
+    {
+        cout << "in base: ";
+        base2::display();
+        cout << "in derived data: " << data << endl;
+    }
+};
 int main()
 {
     derived1 obj1(5);
@@ -68,4 +97,6 @@ int main()
     ob3.display();
     derived4<int, float> ob4(4, 3.7);
     ob4.display();
+    derived5<float> ob5(25, 9.7);
+    ob5.display();
 }
