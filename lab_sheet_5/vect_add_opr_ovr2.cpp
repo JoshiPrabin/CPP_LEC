@@ -22,12 +22,12 @@ public:
     {
         cout << x << "i + " << y << "j + " << z << "k" << endl;
     }
-    vector friend operator+(vector v, vector v1)
+    vector operator+(vector v)
     {
-        v1.x = v1.x + v.x;
-        v1.y = v1.y + v.y;
-        v1.z = v1.z + v.z;
-        return v1;
+        v.x = x + v.x;
+        v.y = y + v.y;
+        v.z = z + v.z;
+        return v;
     }
 };
 
