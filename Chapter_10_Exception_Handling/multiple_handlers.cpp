@@ -39,17 +39,18 @@ int main(){
     try{
         s.push(11);
         s.push(22);
-        // s.push(33);
+        s.push(33);
+        s.push(44);
 
         cout<<"Number popped: "<<s.pop()<<endl;
         cout<<"Number popped: "<<s.pop()<<endl;
         cout<<"Number popped: "<<s.pop()<<endl;
     }
-        catch(Stack::FULL){
-            cout<<"Exception: Stack is full."<<endl;
-        }
-        catch(Stack::EMPTY){
-            cout<<"Exception: Stack is empty."<<endl;
-        }
-        return 0;
+    catch(Stack::FULL){
+        cout<<"Exception: Stack is full."<<endl;
+    }
+    catch(Stack::EMPTY){
+        cout<<"Exception: Stack is empty."<<endl;
+    }
+    return 0;
 }
