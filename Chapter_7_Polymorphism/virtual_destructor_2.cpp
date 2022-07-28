@@ -17,9 +17,9 @@ class base{
 class derived: public base{
     public:
         derived(){
-            cout<<"this is the constructor of base class"<<endl;
+            cout<<"this is the constructor of derived class"<<endl;
         }
-        virtual ~derived(){
+        ~derived(){
             cout<<"this is the destructor of derived class"<<endl;
         }
 };
