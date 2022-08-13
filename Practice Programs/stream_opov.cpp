@@ -16,10 +16,12 @@ istream& operator >>(istream& input, complex obj){
     input>>obj.real;
     cout<<"\n enter imag: ";
     input>>obj.imag;
+    return input;
 }
 
 ostream& operator <<(ostream& output, complex obj){
     cout<<"\n the complex number is: "<<obj.real<<"+ i"<<obj.imag<<endl;
+    return output;
 }
 
 int main(){
