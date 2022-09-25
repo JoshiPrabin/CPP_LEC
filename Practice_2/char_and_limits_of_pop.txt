@@ -1,0 +1,14 @@
+Characterstics:
+    1) A large program can be broken down into small managable procedures or functions.
+    2) Focuses on functions rather than on data.
+    3) For sharing a common data among different functions, the data is made global.
+    4) Since global functions are transferred from function to function; during the course of transformation the global data may be altered.
+    5) The program design of POP follows top down methodology.
+
+Limitations:
+    1) Focus on function rather than data.
+    2) In large program, it is difficult to identify the belonging of global data.
+    3) The use of global data is error prone and can be an obstacle in code maintainance and enhancement.
+    4) The modification of global data requires the modification of those function using it.
+    5) Maintaining and enhancing program code is still difficult because of global data.
+    6) It does not model real world problem very well.
