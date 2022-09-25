@@ -1,0 +1,9 @@
+1) Object: 
+2) Class:
+3) Abstraction: 
+4) Encapsulation: 
+5) Inheritance: 
+6) Reusability:
+7) Polymorphism: 
+8) Dynamic binding: 
+9) Message passing:
