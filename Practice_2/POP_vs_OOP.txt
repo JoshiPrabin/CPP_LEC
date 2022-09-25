@@ -1,0 +1,19 @@
+POP:
+    1) Emphasis is given on procedures.
+    2) Programs are divided into functions.
+    3) Follows top-down methodology.
+    4) Generally data cannot be hidden.
+    5) It does not model real world problem very well.
+    6) Data move from functions to functions.
+    7) Maintining and enhancing code is difficult.
+    8) Code reusability is difficult.
+
+OOP:
+    1) Emphasis is given on data.
+    2) Programs are divided into classes and objects.
+    3) Follows bottom-up methodology.
+    4) Data can be hidden so that non-member functions cannot access them.
+    5) It models the real world problem very well.
+    6) Data and functions are tied together. Only related functions can access them.
+    7) Maintining and enhancing code is easy.
+    8) Code reusability is easy compared to POP.
