@@ -39,5 +39,9 @@ int main(){
     else{
         cout<<"Cast failed."<<endl;
     }
+
+    cout<<"Type of d is "<<typeid(d).name()<<endl;
+    cout<<"Type of anm is "<<typeid(anm).name()<<endl;
+    return 0;
     
 }
